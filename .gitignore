@@ -1,4 +1,4 @@
-/data/
+/data/*
 !/data/cifar-10-batched-py/.gitkeep
 
 /Experiments/
