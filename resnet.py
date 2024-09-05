@@ -9,11 +9,13 @@ from tqdm import tqdm
 import ipdb
 import yaml
 from torchvision.models import ResNet18_Weights, ResNet34_Weights
+from smilelogging import Logger  # ==> Add this line
 
 
 def config_parser():
     import configargparse
-    parser = configargparse.ArgumentParser()
+    # parser = configargparse.ArgumentParser()
+    from smilelogging import argparser as parser  # ==> Replace above with this line
     
     parser.add_argument('--config', is_config_file=True, 
                         help='config file path')
@@ -27,7 +29,7 @@ def config_parser():
 def main():
     parser = config_parser()
     args = parser.parse_args()
-    # ipdb.set_trace()
+    logger = Logger(args, overwrite_print=True)  
 
     # 数据预处理
     transform = transforms.Compose([
