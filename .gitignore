@@ -1,3 +1,5 @@
 /data/
+!/data/cifar-10-batched-py/
+
 /Experiments/
 /smilelogging/
