@@ -1,5 +1,5 @@
 /data/*
-!/data/cifar-10-batched-py/.gitkeep
+!/data/.gitkeep
 
 /Experiments/
 /smilelogging/
